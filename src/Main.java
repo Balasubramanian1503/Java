@@ -173,14 +173,21 @@ public class Main {
 //            num = num/10;
 //        }
 //        System.out.println(odd + oddCount + even + evenCount);
-        int num = 143;
-        int rev = 0;
-        while(num > 0){
-            int digit = num % 10;
-            rev = rev * 10 + digit;
-            num = num / 10;
+//        int num = 143;
+//        int rev = 0;
+//        while(num > 0){
+//            int digit = num % 10;
+//            rev = rev * 10 + digit;
+//            num = num / 10;
+//        }
+//        System.out.println(rev);
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        long fact = 1;
+        for(int i=1;i<=n;i++){
+            fact *=i;
         }
-        System.out.println(rev);
+        System.out.println(fact);
     }
 }
 
