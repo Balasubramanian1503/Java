@@ -181,13 +181,53 @@ public class Main {
 //            num = num / 10;
 //        }
 //        System.out.println(rev);
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        long fact = 1;
-        for(int i=1;i<=n;i++){
-            fact *=i;
-        }
-        System.out.println(fact);
+//        Scanner scan = new Scanner(System.in);
+//        int n = scan.nextInt();
+//        long fact = 1;
+//        for(int i=1;i<=n;i++){
+//            fact *=i;
+//        }
+//        System.out.println(fact);
+//Fibonacci Series;
+//        int n = scan.nextInt();
+//        int a =0;
+//        int b=1;
+//        for(int i=0;i<n;i++){
+//            System.out.println(a +" ");
+//            int c = a+b;
+//            a=b;
+//            b=c;
+//        }
+// sum of numbers
+//        int n= 123;
+//        int sum=0;
+//        while(n!=0){
+//            sum += n % 10;
+//            n /=10;
+//        }
+//        System.out.println(sum);
+// sum of even numbers;
+//        int num = 123;
+//        int sum=0;
+//        while(num!=0){
+//           int digit = num % 10;
+//           if(digit %2 ==0){
+//               sum += num %10;
+//           }
+//            num /=10;
+//        }
+//        System.out.println(sum);
+// sum of odd numbers;
+//        int num = 123456789;
+//        int sum =0;
+//        while(num!=0){
+//            int digit = num %10;
+//            if(num % 2!=0){
+//                sum += num % 10;
+//            }
+//            num /=10;
+//        }
+//        System.out.println(sum);
     }
 }
 
