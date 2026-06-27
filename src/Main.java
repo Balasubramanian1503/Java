@@ -228,6 +228,91 @@ public class Main {
 //            num /=10;
 //        }
 //        System.out.println(sum);
+        // Magic number
+//        int num = 50113;
+//        int temp =num;
+//        while(temp>9){
+//            int sum =0;
+//            while(temp !=0){
+//                sum += temp % 10;
+//                temp /=10;
+//            }
+//            temp = sum;
+//        }
+//        if(temp ==1){
+//            System.out.println("Magic numbers");
+//        }else{
+//            System.out.println("Not a magic number");
+//        }
+//2 digit reduced subtracted form
+//        String num = "6928";
+//        while (num.length() > 2) {
+//            String result = "";
+//            for (int i = 0; i < num.length() - 1; i++) {
+//                int a = num.charAt(i) - '0';
+//                int b = num.charAt(i + 1) - '0';
+//                result += Math.abs(a - b);
+//            }
+//            System.out.println(result);
+//            num = result;
+//        }
+//        System.out.println("Final Output: " + num);
+//        sum of odd numbers and arrangement of odd sequence
+//        String num = "361589";
+//        String odd = "";
+//        String even = "";
+//        for (int i = 0; i < num.length(); i++) {
+//            char ch = num.charAt(i);
+//            if ((ch - '0') % 2 != 0) {
+//                odd += ch;
+//            } else {
+//                even += ch;
+//            }
+//        }
+//        System.out.println(odd + even);
+
+//        Arrangement of odd sequence followed by even sequence
+
+//        String num = "361589";
+//        String odd = "";
+//        String even = "";
+//        for (int i = 0; i < num.length(); i++) {
+//            char ch = num.charAt(i);
+//
+//            if ((ch - '0') % 2 != 0) {
+//                odd += ch;
+//            } else {
+//                even += ch;
+//            }
+//        }
+//        System.out.println(odd + even);
+
+//        Program to reverse the number using a loop
+//
+//        int num = 143;
+//        int rev =0;
+//        while(num!=0){
+//            int digit=num %10;
+//            rev = rev *10 + digit;
+//            num /=10;
+//        }
+//        System.out.println(rev);
+
+//        Problem to check whether all the numbers are arranged in ascending order
+
+//        String num = "4567";
+//        boolean ascending = true;
+//        for (int i = 0; i < num.length() - 1; i++) {
+//            if (num.charAt(i) >= num.charAt(i + 1)) {
+//                ascending = false;
+//                break;
+//            }
+//        }
+//        if (ascending) {
+//            System.out.println("Yes");
+//        } else {
+//            System.out.println("No");
+//        }
     }
 }
 
