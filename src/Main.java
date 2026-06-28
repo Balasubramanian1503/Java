@@ -313,6 +313,90 @@ public class Main {
 //        } else {
 //            System.out.println("No");
 //        }
+        // stepping numbers
+//        String num = "12345";
+//        boolean step = true;
+//        for (int i = 0; i < num.length() - 1; i++) {
+//            int diff = Math.abs((num.charAt(i) - '0') - (num.charAt(i + 1) - '0'));
+//            if (diff != 1) {
+//                step = false;
+//                break;
+//            }
+//        }
+//        if (step) {
+//            System.out.println("Yes");
+//        } else {
+//            System.out.println("No");
+//        }
+
+//        . Sum of Sums of Digits in Cyclic order
+//        String num = "1234";
+//        int total = 0;
+//        String temp = num;
+//        for (int i = 0; i < num.length(); i++) {
+//            int sum = 0;
+//            for (int j = 0; j < temp.length(); j++) {
+//                sum += temp.charAt(j) - '0';
+//            }
+//            total += sum;
+//            temp = temp.substring(1) + temp.charAt(0);
+//        }
+//        System.out.println(total);
+
+//        Generate series and find Nth element:
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter first term: ");
+//        int a = sc.nextInt();
+//        System.out.print("Enter common difference: ");
+//        int d = sc.nextInt();
+//        System.out.print("Enter N: ");
+//        int n = sc.nextInt();
+//        int nthTerm = a + (n - 1) * d;
+//        System.out.println("Nth Element = " + nthTerm);
+
+//        Find result after alternate add_sub on N:
+//        String num = "1234";
+//        int result = num.charAt(0) - '0';
+//        for (int i = 1; i < num.length(); i++) {
+//            int digit = num.charAt(i) - '0';
+//            if (i % 2 == 1) {
+//                result += digit;
+//            } else {
+//                result -= digit;
+//            }
+//        }
+//        System.out.println(result);
+//        Find Password (stable unstable):
+        String num = "1232";
+        int freq = -1;
+        boolean stable = true;
+        for (int i = 0; i < num.length(); i++) {
+            int count = 0;
+            boolean checked = false;
+            for (int k = 0; k < i; k++) {
+                if (num.charAt(i) == num.charAt(k)) {
+                    checked = true;
+                    break;
+                }
+            }
+            if (checked)
+                continue;
+            for (int j = 0; j < num.length(); j++) {
+                if (num.charAt(i) == num.charAt(j)) {
+                    count++;
+                }
+            }
+            if (freq == -1) {
+                freq = count;
+            } else if (freq != count) {
+                stable = false;
+                break;
+            }
+        }
+        if (stable)
+            System.out.println("Stable");
+        else
+            System.out.println("Unstable");
     }
 }
 
