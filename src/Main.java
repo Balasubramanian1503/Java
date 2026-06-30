@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        int n=100;
 //        boolean isprime=true;
 //        for (int i = 2; i <=Math.sqrt(n); i++) {
@@ -228,7 +228,7 @@ public class Main {
 //            num /=10;
 //        }
 //        System.out.println(sum);
-        // Magic number
+    // Magic number
 //        int num = 50113;
 //        int temp =num;
 //        while(temp>9){
@@ -313,7 +313,7 @@ public class Main {
 //        } else {
 //            System.out.println("No");
 //        }
-        // stepping numbers
+    // stepping numbers
 //        String num = "12345";
 //        boolean step = true;
 //        for (int i = 0; i < num.length() - 1; i++) {
@@ -367,39 +367,128 @@ public class Main {
 //        }
 //        System.out.println(result);
 //        Find Password (stable unstable):
-        String num = "1232";
-        int freq = -1;
-        boolean stable = true;
-        for (int i = 0; i < num.length(); i++) {
-            int count = 0;
-            boolean checked = false;
-            for (int k = 0; k < i; k++) {
-                if (num.charAt(i) == num.charAt(k)) {
-                    checked = true;
-                    break;
-                }
-            }
-            if (checked)
-                continue;
-            for (int j = 0; j < num.length(); j++) {
-                if (num.charAt(i) == num.charAt(j)) {
-                    count++;
-                }
-            }
-            if (freq == -1) {
-                freq = count;
-            } else if (freq != count) {
-                stable = false;
-                break;
-            }
-        }
-        if (stable)
-            System.out.println("Stable");
-        else
-            System.out.println("Unstable");
-    }
-}
+//        String num = "1232";
+//        int freq = -1;
+//        boolean stable = true;
+//        for (int i = 0; i < num.length(); i++) {
+//            int count = 0;
+//            boolean checked = false;
+//            for (int k = 0; k < i; k++) {
+//                if (num.charAt(i) == num.charAt(k)) {
+//                    checked = true;
+//                    break;
+//                }
+//            }
+//            if (checked)
+//                continue;
+//            for (int j = 0; j < num.length(); j++) {
+//                if (num.charAt(i) == num.charAt(j)) {
+//                    count++;
+//                }
+//            }
+//            if (freq == -1) {
+//                freq = count;
+//            } else if (freq != count) {
+//                stable = false;
+//                break;
+//            }
+//        }
+//        if (stable)
+//            System.out.println("Stable");
+//        else
+//            System.out.println("Unstable");
 
+//    Calculate sum of non-prime index values:
+//        static boolean isPrime(int n) {
+//            if (n < 2)
+//                return false;
+//            for (int i = 2; i <= Math.sqrt(n); i++) {
+//                if (n % i == 0)
+//                    return false;
+//            }
+//            return true;
+//        }
+//        public static void main(String[] args) {
+//            Scanner sc = new Scanner(System.in);
+//            int n = sc.nextInt();
+//            int[] arr = new int[n];
+//            for (int i = 0; i < n; i++) {
+//                arr[i] = sc.nextInt();
+//            }
+//            int sum = 0;
+//            for (int i = 0; i < n; i++) {
+//                if (!isPrime(i)) {
+//                    sum += arr[i];
+//                }
+//            }
+//            System.out.println(sum);
+
+    //            Find the one digit to be removed to form palindrome:
+//    static boolean isPalindrome(String s) {
+//        int i = 0, j = s.length() - 1;
+//        while (i < j) {
+//            if (s.charAt(i) != s.charAt(j))
+//                return false;
+//            i++;
+//            j--;
+//        }
+//        return true;
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        String num = sc.next();
+//        boolean found = false;
+//        for (int i = 0; i < num.length(); i++) {
+//            String str = num.substring(0, i) + num.substring(i + 1);
+//            if (isPalindrome(str)) {
+//                System.out.println("Digit to remove: " + num.charAt(i));
+//                found = true;
+//                break;
+//            }
+//
+//            if (!found) {
+//                System.out.println("Not Possible");
+//            }
+//        }
+//    Create PIN using alpha, beta, gamma:
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int alpha = sc.nextInt();
+//        int beta = sc.nextInt();
+//        int gamma = sc.nextInt();
+//        int min = 9;
+//        int max = 0;
+//        int[] arr = {alpha, beta, gamma};
+//        for (int num : arr) {
+//            int temp = num;
+//            while (temp > 0) {
+//                int digit = temp % 10;
+//                if (digit < min)
+//                    min = digit;
+//                if (digit > max)
+//                    max = digit;
+//                temp /= 10;
+//            }
+//        }
+//        int unitMin = Math.min(alpha % 10, Math.min(beta % 10, gamma % 10));
+//        int unitMax = Math.max(alpha % 10, Math.max(beta % 10, gamma % 10));
+//        System.out.println("" + min + max + unitMin + unitMax);
+//    }
+
+//    Missing number in an array of shuffled order
+//    Input:[3, 7, 1, 2, 8, 4, 5]
+public static void main(String[] args) {
+    int[] arr = {3, 7, 1, 2, 8, 4, 5};
+    int n = arr.length + 1;
+    int total = n * (n + 1) / 2;
+    int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+        System.out.println("Missing Number = " + (total - sum));
+}
+}
 
 
 
